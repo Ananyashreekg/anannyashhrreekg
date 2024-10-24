@@ -1,0 +1,86 @@
+/* Reset body and html to prevent extra scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* components/About.css */
+
+/* Adjust the about section to fit within the available space */
+.about {
+  flex: 1; /* Takes up the remaining space between header and footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+  box-sizing: border-box; /* Ensure padding doesn't add to width/height */
+
+  /* Background settings */
+  background: url("../assets/image.jpg") no-repeat center center/cover;
+}
+
+/* Ensure that the navbar stays above the .about section */
+.navbar {
+  position: fixed; /* Navbar fixed at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Ensure navbar stays on top of everything */
+}
+
+/* Heading styling */
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-in-out;
+  z-index: 2; /* Ensure text is above overlay */
+}
+
+/* Paragraph styling */
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 10px 0;
+  color: white;
+  animation: fadeInUp 1s ease-in-out;
+  
+  z-index: 2; /* Ensure text is above overlay */
+}
+
+/* Overlay for better text readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(247, 247, 247, 0); /* Slight dark overlay for better contrast */
+  z-index: 1; /* Ensure overlay is below the text */
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+}

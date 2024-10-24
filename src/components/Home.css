@@ -1,0 +1,133 @@
+/* Reset body and html to prevent extra scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Ensures vertical stacking */
+  justify-content: space-between; /* Space between header, content, and footer */
+}
+
+/* components/Home.css */
+
+/* Adjust the home section to fit within available space */
+
+.home {
+  flex: 1; /* Takes up the remaining space between header and footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #add8e6; /* Light blue background */
+  overflow: hidden; /* Prevent scrolling */
+  box-sizing: border-box; /* Ensure padding doesn't add to width/height */
+}
+
+/* If using a background image instead of color */
+.home {
+  background: url("../assets/image.jpg") no-repeat center center/cover;
+}
+
+/* Styling for the text content */
+.ps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: #ffffff;
+  font-size: medium;
+}
+
+/* Profile picture styling */
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 4px solid #b4d6e6;
+  object-fit: cover;
+}
+
+/* Heading styling */
+.home h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-in-out;
+  text-align: center;
+}
+
+.home h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  /* background-color: #add8e6; */
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  animation: fadeInUp 1s ease-in-out;
+  text-align: center;
+}
+
+/* Paragraph styling */
+.ps p {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffffff;
+  animation: fadeInUp 1s ease-in-out;
+  text-align: center;
+}
+
+/* Fade-in animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 40px;
+  }
+
+  .ps p {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+}

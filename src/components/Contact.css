@@ -1,0 +1,138 @@
+/* Body styling with background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Reset margin */
+    padding-top: 60px; /* Adjust this value based on your navbar height */
+    background-color: #903939;
+    background: url("../assets/image.jpg") no-repeat center center/cover;
+}
+
+/* Main contact container styling */
+.contact-container {
+    padding: 20px;
+}
+
+/* Heading and paragraph styling */
+h2, h3 {
+    color: rgb(252, 253, 253);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+strong {
+     color: rgb(252, 253, 253);
+}
+
+p {
+    font-size: 18px;
+    color: rgb(251, 243, 243);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Contact details section: Flexbox to align phone and email side by side */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between the phone and email */
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    padding: 0;
+}
+
+.contact-details li {
+    list-style: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-details li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-details li a:hover {
+    text-decoration: underline;
+}
+
+/* Social links styling: Flexbox to align links side by side in the center */
+.social-links {
+    display: flex;
+    justify-content: center; /* Align center */
+    gap: 30px; /* Space between each social link */
+    margin: 20px 0;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links li a {
+    font-size: 18px;
+    color: #f0f0f7;
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: #a6b7bf;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #e6e6e6;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dacfcf;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0b0b7c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #005f8f;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links li {
+        margin-bottom: 10px;
+    }
+}

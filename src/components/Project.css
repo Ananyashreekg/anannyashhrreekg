@@ -1,0 +1,93 @@
+/* Container and grid layout for the projects */
+.projects-container {
+  padding: 120px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  background: url("../assets/image.jpg") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow-y: auto; /* Allows scrolling */
+}
+
+/* Grid layout for project cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduced size for smaller cards */
+  gap: 20px;
+  max-width: 1000px; /* Adjusted to fit more cards */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Project card styling */
+.project-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 200px; /* Reduced card width */
+  height: 300px; /* Reduced card height */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  padding: 15px; /* Added padding */
+  overflow-y: auto; /* Allows scrolling if the description is long */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Ensure the link takes the color of the text inside */
+}
+
+/* Title styling */
+.project-title {
+  color: #0a3d62;
+  font-size: 20px; /* Adjusted font size for the title */
+  margin-bottom: 10px;
+}
+
+/* Project description styling */
+.project-description {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Hover effect on project card */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller cards on mobile */
+  }
+
+  .project-card {
+      max-width: 150px;
+      height: 250px;
+  }
+
+  .project-title {
+      font-size: 16px;
+  }
+
+  .project-description {
+      font-size: 12px;
+  }
+}
